@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.h1{
+    text-align: center;
+    padding: 10px;
+    color: #1ea522;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    background: #222;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px #fff;
+}
+.upphoto{
+    color: #9ebfa1;
+    background: none;
+    cursor: unset;
+}
+body {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* Ajout d'une hauteur minimale pour assurer que le contenu soit visible sur tous les écrans */
+}
+
+.container {
+    background: #222;
+    width: 80vw;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    gap: 20px; /* Ajout d'un espace entre les colonnes */
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Ajustement de l'espace entre les éléments enfants */
+    justify-content: center;
+    align-items: center;
+}
+
+.img img,
+canvas {
+    display: block; /* Utilisation de "block" au lieu de "flex" pour img et canvas */
+    max-width: 100%;
+    max-height: 60vh;
+    height: auto; /* Assure que l'image conserve ses proportions */
+}
+
+.upload input {
+    display: none;
+}
+
+.upload label {
+    color: #fff;
+    padding: 8px 20px;
+    border: 2px #fff dashed;
+    cursor: pointer;
+    display: inline-block; /* Permet d'ajuster la largeur du label */
+}
+
+.filters ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Ajustement de l'espace entre les éléments de la liste */
+}
+
+.filters ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ajustement de l'espace entre les éléments enfants */
+    direction: rtl;
+}
+
+.filters ul li label {
+    color: #fff;
+}
+
+.filters ul li:last-child {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.filters ul li a,
+span {
+    color: #fff;
+    padding: 10px 20px;
+    background: #060;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .img img,
+    canvas {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <title>My Edit App</title>
+    <style>
+        .ul{
+            background: #222;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px;
+            list-style: none;
+            box-shadow: 0 0 10px #fff;
+        }
+        .li{
+            padding: 15px;
+            color: #fffcfc;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            font-weight: 600;
+        }
+        .li:hover{
+            background: rgb(51, 182, 51);
+            color: rgb(22, 22, 22);
+        }
+        #home{
+            background: #060;
+        }
+        #home:hover{
+            background: rgb(40, 158, 40);
+        }
+        #logOut{
+            background: #ac1212;
+        }
+        #logOut:hover{
+            background: #de1717;
+        }
+        #logOut{
+            position: absolute;
+            bottom: 0;
+            width: 9%;
+        }
+    </style>
+</head>
+<body><div>
+    <h1 class="h1">Najib's Editing App &nbsp;</h1><br>
+    <ul class="ul">
+        <li class="li" id="home"><i class='bx bxs-home' id="icon" style='color:#fffcfc'></i> &nbsp; Home</li>
+        <li class="li"><i class='bx bxs-hand' style='color:#fffcfc'></i> &nbsp; About</li>
+        <li class="li"><i class='bx bxs-photo-album' style='color:#fffcfc'></i> &nbsp; My Photos</li>
+        <li class="li"><i class='bx bxs-wallet' style='color:#fffcfc'></i> &nbsp; Donate</li>
+        <li class="li"><i class='bx bxs-help-circle' style='color:#fffcfc'></i> &nbsp; Help</li>
+        <li class="li"><i class='bx bx-world' style='color:#fffcfc'></i> &nbsp; Language</li> 
+        <li class="li"><i class='bx bxs-extension' style='color:#fffcfc'></i> &nbsp; Settings</li> 
+        <li class="li" id="logOut"><i class='bx bx-log-out' style='color:#fffcfc'></i> &nbsp; Log out</li>
+    </ul>
+</div>
+    
+    
+    <div class="container">
+        <div class="img">
+            <div class="img-box">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="upload">
+                <label for="upload">Upload</label><br>
+               <span class="upphoto" id="upphoto">• &nbsp;Upload your Photo</span> 
+                <input type="file" id="upload">
+            </div>
+        </div>
+        <div class="filters">
+            <ul>
+                <li>
+                    <label for="saturate">Saturation</label>
+                    <input type="range" id="saturate" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="Contrast">Contrast</label>
+                    <input type="range" id="Contrast" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" min="0" max="200" value="0">
+                </li>
+                <li>
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" id="grayscale" step="0.1" min="0" max="1" value="0">
+                </li>
+                <li>
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" step="0.1" min="0" max="10" value="0">
+                </li>
+                <li>
+                    <label for="hue-rotate">Hue Rotate</label>
+                    <input type="range" id="hue-rotate" step="0.1" min="0" max="350" value="0">
+                </li>
+                <li>
+                    <a download="image" id="download">Download</a>
+                    <span onclick="resetValue()" id="reset">Reset</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
